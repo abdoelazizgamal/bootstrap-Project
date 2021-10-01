@@ -1,0 +1,188 @@
+body {
+  font-family: cursive;
+  position: relative;
+}
+
+section {
+  overflow: hidden;
+}
+
+/*** utilites ***/
+.bg-section {
+  background-color: #F6F9FE;
+}
+
+.title-before {
+  background: #e7f1fd;
+}
+
+/*
+  navBar
+  Customize Active
+*/
+.navbar-light .navbar-nav .nav-link {
+  position: relative;
+  transition: .3s;
+}
+
+.navbar-light .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #106eea;
+  transition: inherit;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #106eea;
+}
+
+.navbar-light .navbar-nav .nav-link.active::before,
+.navbar-light .navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+.navbar-light .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/********** Header **********/
+#header {
+  height: 75vh;
+  background: url(../img/hero-bg.jpg) center center/cover;
+}
+
+#header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/********** Modal ************/
+#exampleModal object {
+  height: 80vh;
+}
+
+#exampleModal.fade .modal-dialog {
+  transition: transform 0.5s ease-out;
+  transform: scale(0);
+}
+
+#exampleModal.show .modal-dialog {
+  transform: none;
+}
+
+/*** Icon Container ***/
+.icon-container {
+  width: 70px;
+  height: 70px;
+}
+
+/*** progress ***/
+.progress-bar {
+  transition: .5s;
+}
+
+/* .progress-div[data-scroll="in"] .progress-bar {
+  width: 50%;
+} */
+/***** Icon *****/
+.icon {
+  width: 60px;
+  height: 60px;
+}
+
+/*** Icon Box ***/
+.icon-box .card-overlay {
+  inset: 0;
+}
+
+.icon-box>* {
+  position: relative;
+  transition: .5s;
+}
+
+.icon-box:hover .card-overlay {
+  top: 0 !important;
+}
+
+.icon-box:hover>* {
+  color: #fff !important;
+}
+
+/************ Slider Div *****************/
+.slider-div {
+  background: url(../img/testimonials-bg.jpg) center center/cover;
+}
+
+.slider-div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider-div #carouselExampleCaptions {
+  height: 300px;
+}
+
+.slider-div .carousel-item img {
+  width: 150px;
+  height: 150px;
+}
+
+/******* Filter ****/
+.filterd-items>a {
+  height: 350px;
+}
+
+.filterd-items>a.hidden {
+  display: none;
+}
+
+.filterd-items>a.active {
+  display: block;
+  animation: .7s shown ease-in-out;
+}
+
+.filterd-items>a img {
+  object-fit: contain;
+}
+
+/**** Contact ****/
+#Contact i {
+  height: 50px;
+  width: 50px;
+  border: 1px dashed;
+  line-height: 50px;
+}
+
+/* footer-list */
+.footer-list li {
+  position: relative;
+}
+
+.footer-list li::before {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  border-left-color: #106eea;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes shown {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
